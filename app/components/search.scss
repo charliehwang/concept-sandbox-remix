@@ -1,0 +1,9 @@
+@include keyframes(fadeInTop)
+  0%
+    opacity: 0
+    @include transform(translateY(-1.334em) translateZ(0))
+  100%
+    opacity: 1
+
+@mixin fadeInTop($dur: 1s, $delay: 0s, $fill: forwards)
+  @include prefixer(animation, fadeInTop $dur $delay $fill, webkit spec)
